@@ -1,12 +1,15 @@
 import random
 
+# Limits for input
 MAX_LINES = 3 # all capitals for constants
 MAX_BET = 100
 MIN_BET = 1
 
+# Matrix 
 ROWS = 3
 COLS = 3
 
+# Symbols Dictionary
 symbol_count = {
     "A": 2,
     "B": 4,
@@ -14,6 +17,7 @@ symbol_count = {
     "D": 8
 }
 
+# Get a random list of columns of symbols.
 def get_slot_machine_spin(cols, rows, symbols):
     all_symbols = []
     for symbol, symbol_count in symbols.items():
@@ -33,6 +37,7 @@ def get_slot_machine_spin(cols, rows, symbols):
 
     return columns
 
+# Display the symbols in columns x rows format.
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
@@ -42,6 +47,7 @@ def print_slot_machine(columns):
                 print(column[row], end="")
         print()
 
+# Get how much money play wants to deposit.
 def deposit():
     while True:
         amount = input("How much would you like to deposit: $")
@@ -56,6 +62,7 @@ def deposit():
 
     return amount
 
+# Get how many lines player wants to bet on.
 def get_number_of_lines():
     while True:
         lines = input(f"Enter number of lines to bet on (1-{MAX_LINES}): ")
@@ -70,6 +77,7 @@ def get_number_of_lines():
     
     return lines
 
+# Get how much money player wants to bet on each line.
 def get_bet():
     while True:
         bet = input("How much would you like to bet on each line: $")

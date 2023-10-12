@@ -1,3 +1,5 @@
+import random
+
 MAX_LINES = 3 # all capitals for constants
 MAX_BET = 100
 MIN_BET = 1

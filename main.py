@@ -4,6 +4,9 @@ MAX_LINES = 3 # all capitals for constants
 MAX_BET = 100
 MIN_BET = 1
 
+ROWS = 3
+COLS = 3
+
 def deposit():
     while True:
         amount = input("How much would you like to deposit: $")

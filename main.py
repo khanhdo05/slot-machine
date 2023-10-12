@@ -19,10 +19,10 @@ def get_number_of_lines():
         lines = input("Enter number of lines to bet on (1-" + str(MAX_LINES) + "): ")
         if lines.isdigit():
             lines = int(lines)
-            if lines > 0:
+            if 1 <= lines <= MAX_LINES:
                 break
             else:
-                print("Number of lines must be greater than 0.")
+                print("Please enter a number between 1 and" + str(MAX_LINES) + ".")
         else:
             print("Please enter a number.")
     

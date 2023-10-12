@@ -1,4 +1,6 @@
 MAX_LINES = 3 # all capitals for constants
+MAX_BET = 100
+MIN_BET = 1
 
 def deposit():
     while True:
@@ -27,6 +29,8 @@ def get_number_of_lines():
             print("Please enter a number.")
     
     return lines
+
+
 
 def main():
     balance = deposit()

@@ -24,7 +24,7 @@ def get_number_of_lines():
             if 1 <= lines <= MAX_LINES:
                 break
             else:
-                print("Please enter a number between 1 and" + str(MAX_LINES) + ".")
+                print("Please enter a number between 1 and " + str(MAX_LINES) + ".")
         else:
             print("Please enter a number.")
     

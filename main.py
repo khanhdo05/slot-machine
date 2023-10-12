@@ -18,13 +18,13 @@ def deposit():
 
 def get_number_of_lines():
     while True:
-        lines = input("Enter number of lines to bet on (1-" + str(MAX_LINES) + "): ")
+        lines = input(f"Enter number of lines to bet on (1-{MAX_LINES}): ")
         if lines.isdigit():
             lines = int(lines)
             if 1 <= lines <= MAX_LINES:
                 break
             else:
-                print("Please enter a number between 1 and " + str(MAX_LINES) + ".")
+                print(f"Please enter a number between 1 and {MAX_LINES}.")
         else:
             print("Please enter a number.")
     
@@ -32,13 +32,13 @@ def get_number_of_lines():
 
 def get_bet():
     while True:
-        bet = input("How much would you like to bet: $")
+        bet = input("How much would you like to bet on each line: $")
         if bet.isdigit():
             bet = int(bet)
             if MIN_BET <= bet <= MAX_BET:
                 break
             else:
-                print("Please enter a number between " + str(MIN_BET) + " and " + str(MAX_BET) + ".")
+                print(f"Please enter a number between ${MIN_BET} and ${MAX_BET}.")
         else:
             print("Please enter a number.")
     

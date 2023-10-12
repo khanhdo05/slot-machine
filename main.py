@@ -1,5 +1,12 @@
 import random
 
+print('''Welcome to the SLOT MACHINE simulator!
+This is a simple slot machine. You will be asked to deposit some amount of $.
+Anytime you want to stop playing, just hit "q"
+Don't get bankdrupt!
+Now play ><
+''')
+
 # Limits for input
 MAX_LINES = 3 # all capitals for constants
 MAX_BET = 100
@@ -114,9 +121,7 @@ def get_bet():
     
     return bet
 
-
-def main():
-    balance = deposit()
+def game(balance):
     lines = get_number_of_lines()
     while True:
         bet = get_bet()
@@ -134,5 +139,17 @@ def main():
     winnings, winning_lines = check_winnings(slots, lines, bet, symbol_value)
     print(f"You won ${winnings}.")
     print(f"You won on lines: ", *winning_lines)
+    return winnings - total_bet
+
+def main():
+    balance = deposit()
+    while True:
+        print(f"Current balance is ${balance}.")
+        ans = input("Press enter to play (q to quit).")
+        if ans == "q":
+            break
+        balance += game(balance)
+    
+    print(f"You left with ${balance}.")
 
 main()

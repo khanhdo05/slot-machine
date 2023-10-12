@@ -14,22 +14,27 @@ symbol_count = {
     "D": 8
 }
 
-def get_slot_machine_spin(rows, cols, symbols):
-    all_symbols = []                             # list of all the different symbols to choose 3 from.
-    for symbol, symbol_count in symbols.items(): # key, value in dictionary. .items to give both key and value.
-        for _ in range(symbol_count):            # underscore for anonymous variable.
-            all_symbols.append(symbol)           # looping through the dictionary. 2 for loops to add symbols twice.
+def get_slot_machine_spin(cols, rows, symbols):
+    all_symbols = []
+    for symbol, symbol_count in symbols.items():
+        for _ in range(symbol_count):            # 2 for loops to generate twice. 2 columns, 3 rows, then rotate to make 3 lines.
+            all_symbols.append(symbol)
+    
+    columns = []
+    for _ in range(cols):
+        column = []
+        current_symbols = all_symbols[:]
+        for _ in range(rows):
+            value = random.choice(all_symbols)
+            current_symbols.remove(value)
+            column.append(value)
 
-        columns = [[], [], []]
-        for _ in range(cols):
-            column = []
-            current_symbols = all_symbols
-            for _ in range(rows):
-                value = random.choice(all_symbols)
-                current_symbols.remove(value)
-                column.append(value)
+        columns.append(column)
 
-            columns.append(column)
+    return columns
+
+def print_slot_machine(columns):
+    
 
 def deposit():
     while True:

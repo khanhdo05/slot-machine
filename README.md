@@ -22,7 +22,6 @@ Click on the file, open with Python, and start using it.
 or <br>
 In Linux terminal, `cd` into the directory that has slot-machine.py, run `python slot-machine.py`.
 ![Screenshot 2023-10-15 113108](https://github.com/khanhdo05/slot-machine/assets/112164825/221bcfeb-cf4b-4c01-b816-c7f5b5c7928a)
-![Screenshot 2023-10-15 113108](https://github.com/khanhdo05/slot-machine/assets/112164825/221bcfeb-cf4b-4c01-b816-c7f5b5c7928a)
 
 ## Change Constraints
 The current code is setting the slot machine to have 6 lines, allowed range of betting $1-$100. You can change this to however you want by modifying these constants in the source code.

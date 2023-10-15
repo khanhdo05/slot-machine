@@ -1,12 +1,3 @@
-#### Importing the required library
-import pandas as pd
-#### Reading csv file
-df = pd.read_csv("C:\\Ujjwal\\New_File_V1.csv")
-#### Adding 2 columns
-df["Third_Column"] = df["Randome Numbers 1"] + df["Random Numbers 2"]
-#### Exporting the data to same location
-df.to_csv("C:\\Ujjwal\\New_File_V2.csv",index = False)
-
 import random
 
 print('''Welcome to the SLOT MACHINE simulator!

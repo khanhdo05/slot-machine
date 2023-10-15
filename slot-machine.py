@@ -8,13 +8,13 @@ Now play ><
 ''')
 
 # Limits for input
-MAX_LINES = 3 # all capitals for constants
+MAX_LINES = 6 # all capitals for constants
 MAX_BET = 100
 MIN_BET = 1
 
 # Matrix 
-ROWS = 3
-COLS = 3
+ROWS = 6
+COLS = 6
 
 # Symbols Dictionary
 symbol_count = {
